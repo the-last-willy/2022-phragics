@@ -1,0 +1,11 @@
+add_executable(phragics_app_viewer)
+target_sources(phragics_app_viewer
+    PRIVATE
+        main.cpp)
+target_link_libraries(phragics_app_viewer
+    PRIVATE
+        phragics
+        phragics::dep::glfw
+        phragics::dep::glm
+        phragics::dep::imgui
+        phragics::dep::std)

@@ -1,6 +1,6 @@
 #pragma once
 
-/// This module provides an abstraction layer for GPU resources.
+/// This service provides an abstraction layer for GPU resources.
 
 #include "phragics/common/gpu/context/context.hpp"
 #include "phragics/common/gpu/gl.hpp"
