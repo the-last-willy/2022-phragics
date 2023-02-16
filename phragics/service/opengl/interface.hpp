@@ -11,7 +11,7 @@ struct API {
         Context context;
 
         struct Buffer {
-            typedef struct : Context { int bufferId; } Context;
+            typedef struct C : Context { int bufferId; } Context;
         };
 
         auto create() const -> unsigned;
@@ -22,7 +22,9 @@ struct API {
     };
 
     struct Shaders {
+		typedef struct C : Context { unsigned shaderId; } Context
 
+		auto create() const ->
     };
 };
 

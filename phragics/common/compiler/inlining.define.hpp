@@ -7,7 +7,7 @@
     #define ALWAYS_INLINED __forceinline
     #define NEVER_INLINED __declspec(noinline)
 #else
-    #warning "Inlining macros are not currently supported for your compiler. Features are disabled."
+    // #warning "Inlining macros are not currently supported for your compiler. Features are disabled."
     #define ALWAYS_INLINED inline
     #define NEVER_INLINED
 #endif

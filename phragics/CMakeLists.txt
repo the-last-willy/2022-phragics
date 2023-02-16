@@ -8,6 +8,7 @@ target_include_directories(phragics
     INTERFACE
         ..)
 
+add_subdirectory(app/dag)
 add_subdirectory(app/viewer)
 add_subdirectory(dep)
 add_subdirectory(service/log)

@@ -1,0 +1,11 @@
+add_executable(phragics_app_dag)
+target_sources(phragics_app_dag
+	PRIVATE
+		main.cpp)
+target_include_directories(phragics_app_dag
+	PRIVATE
+		.)
+target_link_libraries(phragics_app_dag
+	PRIVATE
+		phragics
+		phragics::dep::std)

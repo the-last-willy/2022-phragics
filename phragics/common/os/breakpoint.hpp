@@ -17,7 +17,7 @@ void breakpoint()
     raise(SIGTRAP);
 }
 #else
-#warning "void phragics::breakpoint(): Not currently supported for this compiler."
+// #warning "void phragics::breakpoint(): Not currently supported for this compiler."
 {}
 #endif
 

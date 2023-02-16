@@ -1,9 +1,10 @@
 #pragma once
 
+#include "config.hpp"
 #include "cube_geometry.hpp"
 
-#include <phragics/dep/std/filesystem/filesystem.hpp>
 #include <phragics/dep/glm/all.hpp>
+#include <phragics/dep/std/filesystem/filesystem.hpp>
 
 #include <GLFW/glfw3.h>
 
@@ -56,7 +57,7 @@ struct Background {
 			{
 				vertexShader = glCreateShader(GL_VERTEX_SHADER);
 				auto str = phragics_std::file_to_string(
-					"/media/willy/Data/dev/project/phragics/phragics/shading/background.vert");
+					projectPath + "phragics/shading/background.vert");
 				auto data = str.c_str();
 				glShaderSource(vertexShader, 1, &data, nullptr);
 				glCompileShader(vertexShader);
@@ -69,7 +70,7 @@ struct Background {
 			{
 				fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 				auto str = phragics_std::file_to_string(
-					"/media/willy/Data/dev/project/phragics/phragics/shading/background.frag");
+					projectPath + "phragics/shading/background.frag");
 				auto data = str.c_str();
 				glShaderSource(fragmentShader, 1, &data, nullptr);
 				glCompileShader(fragmentShader);
@@ -308,7 +309,7 @@ struct Cube {
             {
                 vertexShader = glCreateShader(GL_VERTEX_SHADER);
                 auto str = phragics_std::file_to_string(
-                    "/media/willy/Data/dev/project/phragics/phragics/shading/cube.vert");
+					projectPath + "phragics/shading/cube.vert");
                 auto data = str.c_str();
                 glShaderSource(vertexShader, 1, &data, nullptr);
                 glCompileShader(vertexShader);
@@ -316,7 +317,7 @@ struct Cube {
             {
                 fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
                 auto str = phragics_std::file_to_string(
-                    "/media/willy/Data/dev/project/phragics/phragics/shading/cube.frag");
+					projectPath + "phragics/shading/cube.frag");
                 auto data = str.c_str();
                 glShaderSource(fragmentShader, 1, &data, nullptr);
                 glCompileShader(fragmentShader);
@@ -405,7 +406,7 @@ struct Sphere {
 		{
 			vertexShader = glCreateShader(GL_VERTEX_SHADER);
 			auto str = phragics_std::file_to_string(
-				"/media/willy/Data/dev/project/phragics/phragics/shading/sphere.vert");
+				projectPath + "phragics/shading/sphere.vert");
 			auto data = str.c_str();
 			glShaderSource(vertexShader, 1, &data, nullptr);
 			glCompileShader(vertexShader);
@@ -418,7 +419,7 @@ struct Sphere {
 		{
 			fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 			auto str = phragics_std::file_to_string(
-				"/media/willy/Data/dev/project/phragics/phragics/shading/sphere.frag");
+				projectPath + "phragics/shading/sphere.frag");
 			auto data = str.c_str();
 			glShaderSource(fragmentShader, 1, &data, nullptr);
 			glCompileShader(fragmentShader);
